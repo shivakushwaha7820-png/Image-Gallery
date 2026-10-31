@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Image Gallery</h1>
+    <p class="subtitle">Explore Beautiful Images</p>
+
+    <!-- Filter Buttons -->
+    <div class="filters">
+        <button class="active" onclick="filterImages('all', this)">All</button>
+        <button onclick="filterImages('nature', this)">Nature</button>
+        <button onclick="filterImages('city', this)">City</button>
+        <button onclick="filterImages('animals', this)">Animals</button>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+
+        <div class="item" data-category="nature">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600" alt="Nature">
+        </div>
+
+        <div class="item" data-category="city">
+            <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600" alt="City">
+        </div>
+
+        <div class="item" data-category="animals">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600" alt="Dog">
+        </div>
+
+        <div class="item" data-category="nature">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600" alt="Forest">
+        </div>
+
+        <div class="item" data-category="city">
+            <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600" alt="City">
+        </div>
+
+        <div class="item" data-category="animals">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600" alt="Dog">
+        </div>
+
+        <div class="item" data-category="nature">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Mountain">
+        </div>
+
+        <div class="item" data-category="city">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600" alt="Building">
+        </div>
+
+        <div class="item" data-category="animals">
+            <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=600" alt="Dog">
+        </div>
+
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+
+        <span class="close" onclick="closeLightbox()">&times;</span>
+
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+
+        <img id="lightboxImage" src="" alt="Preview">
+
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
